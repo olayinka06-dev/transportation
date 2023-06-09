@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+h1{
+  font-size: 40px;
+}
+.active{
+  @apply relative text-white before:absolute before:bottom-[-10%] before:bg-color-secondary before:transition-transform before:ease-in duration-200 before:scale-x-[1] before:h-1 before:w-full before:left-0 
+}
+.nav-link{
+  @apply relative text-white after:absolute after:bottom-[-10%] after:bg-color-secondary after:transition-transform after:scale-x-0 after:h-1 after:w-full after:left-0 hover:after:scale-x-[1] hover:after:bg-color-secondary
+}
+
+.bg-img{
+  background-image: url(/asset/images/h1_hero.jpg);
+  height: 90vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  min-width: 40px;
+  height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  transition: all .2s ease-in-out;
+  border-radius: 50%;
+}
+.toggle div{
+  background-color: white;
+  height: 2px;
+  width: 25px;
+  transition: all .4s ease;
+  margin-top: 5px 0;
+}
+.toggle.open .first {
+  transform: rotate(-45deg) translate(1px, 11px);
+  margin-right: 15px;
+}
+.toggle.open .second {
+  opacity: 0;
+}
+.toggle.open .third {
+  transform: rotate(45deg) translate(1px, -11px);
+  margin-right: 15px;
+
+}
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
