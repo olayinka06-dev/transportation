@@ -10,7 +10,7 @@ const Navigation = () => {
       <nav className="container flex items-center justify-around bg-color-primary py-5">
         <div className="logo">
           <span className="text-white">
-            Horlly<span className="text-color-secondary">Carries</span>
+            Horlly<span className="text-color-secondary">Carry Go</span>
           </span>
         </div>
         <ul className="hidden lg:flex lg:flex-row lg:space-x-10">
